@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>¡Quieres ser mi novia?</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #fceff5;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .loader {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+
+        .loader::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 80px;
+            margin: 8px;
+            border-radius: 50%;
+            border: 6px solid #ff8ab3;
+            border-color: #ff8ab3 transparent #ff8ab3 transparent;
+            animation: spin 2s linear infinite;
+        }
+
+        .content {
+            display: none;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            color: #d26082;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            font-size: 42px;
+        }
+
+        .btn-container {
+            margin-top: 2%;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn-container button {
+            padding: 14px 24px; /* Ajusta el tamaño a lo largo de los botones */
+            transition: transform 0.3s ease;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+
+        .btn-container button:last-child {
+            margin-right: 0;
+        }
+
+        .btn-container button:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (max-width: 767px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .btn-container {
+                top: 70%;
+                flex-direction: column;
+            }
+
+            .btn-container button {
+                margin-bottom: 10px;
+                margin-right: 0;
+                margin-left: 0;
+            }
+
+            .btn-container button:last-child {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+
+    <div class="content">
+        <h1>¡Quieres ser mi novia?</h1>
+        <div class="btn-container">
+            <button type="button" class="btn btn-outline-success">Sí</button>
+            <button type="button" class="btn btn-outline-danger">No</button>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                document.querySelector('.loader').style.display = 'none';
+                document.querySelector('.content').style.display = 'block';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
