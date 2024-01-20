@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #fceff5;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.loader::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #ff8ab3;
+    border-color: #ff8ab3 transparent #ff8ab3 transparent;
+    animation: spin 2s linear infinite;
+}
+
+.content {
+    display: none;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    color: #d26082;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 42px;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.custom-btn {
+    margin: 0 10px;
+    margin-bottom: 10px;
+    background-color: #ff6699;
+    border: none;
+    color: #fff;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-yes {
+    background-color: #e03e70;
+}
+
+.btn-no {
+    background-color: #f082af;
+}
+
+.btn-no {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.btn-no-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.custom-square {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background-color: #ff6699;
+    border: 2px solid #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutDown {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
