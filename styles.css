@@ -1,0 +1,115 @@
+/* Estilos generales */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alata', sans-serif;
+    background-color: #fce4ec; /* Fondo rosa claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura total de la ventana */
+}
+
+.hidden {
+    display: none;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el mensaje de carga */
+
+#loader {
+    text-align: center;
+}
+
+.loading-title {
+    font-size: 36px;
+    color: #ff4081; /* Color rosa intenso */
+    margin: 0; /* Eliminar márgenes */
+}
+
+/* Estilos para el contenido principal */
+
+#main-content {
+    text-align: center;
+}
+
+.proposal-title {
+    font-size: 36px;
+    color: #ff4081; /* Color rosa intenso */
+    margin: 0; /* Eliminar márgenes */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Espacio superior */
+}
+
+.button-container button {
+    padding: 10px 40px; /* Ancho de los botones */
+    margin: 0 5px; /* Espacio entre botones */
+    border: none;
+    border-radius: 20px;
+    background-color: transparent; /* Fondo transparente */
+    color: #ff4081; /* Color rosa intenso */
+    border: 2px solid #ff4081; /* Borde rosa intenso */
+    cursor: pointer;
+}
+
+.button-container button:focus {
+    outline: none; /* Eliminar contorno al hacer foco */
+}
+
+/* Estilos para el mensaje de aceptación */
+
+#accept-message {
+    text-align: center;
+    transition: opacity 1s ease;
+    margin-top: 20px;
+}
+
+/* Estilos para el mensaje de aceptación */
+
+.accept-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: #ff4081; /* Color rosa intenso */
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ffffff; /* Fondo blanco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.gif-in-circle {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%; /* Hacer que la imagen sea circular */
+    animation: rotate 4s linear infinite; /* Animación de rotación */
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
